@@ -4,7 +4,7 @@ A robotic arm built from FTC (FIRST Tech Challenge) hardware, controllable via
 joystick teleop or real-time hand gesture recognition. Built independently to 
 explore differential joint mechanisms, control systems, and human-robot interaction.
 
-[GIF of the arm moving — final build]
+https://github.com/user-attachments/assets/d9f5299f-2b0d-4cf7-b2cb-1da6fac5e059
 
 ## Overview
 
@@ -25,8 +25,6 @@ This project uses differential joints to achieve smooth, stable motion across 4 
 <img width="513" height="461" alt="armImage" src="https://github.com/user-attachments/assets/c9e8d3f4-98a9-4b66-9252-381acc1c8137" />
 
 ## Software
-
-`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/RoboticArm`
 
 The control stack is split into two independent input modes that feed the 
 same underlying joint-control logic.
