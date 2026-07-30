@@ -12,8 +12,8 @@ This project uses differential joints to achieve smooth, stable motion across 4 
 - **Joystick teleop** — direct gamepad control
 - **Gesture control** — real-time hand tracking via webcam (OpenCV + MediaPipe)
 
-[['**CAD model (Onshape)**]](https://cad.onshape.com/documents/c2f5a4e819de2befe6db6986/w/63769ecc12f9438944d01059/e/e78894e2433cfe468ae38a7b?renderMode=0&uiState=6a6b8af9cacf84581c5f01bb)  
-**Full project writeup (PDF):** [link to PDF in repo]
+[**CAD model (Onshape)**](https://cad.onshape.com/documents/c2f5a4e819de2befe6db6986/w/63769ecc12f9438944d01059/e/e78894e2433cfe468ae38a7b?renderMode=0&uiState=6a6b8af9cacf84581c5f01bb)  
+[**Project Summary**](https://github.com/nikhilcoding0013/Robotic-Arm/blob/master/doc/ProjectSummary.pdf)
 
 ## Hardware
 - REV Smart Servos (upper differential joint)
