@@ -8,10 +8,7 @@ explore differential joint mechanisms, control systems, and human-robot interact
 
 ## Overview
 
-This project uses differential joints (rather than simple hinge joints) to 
-achieve smoother, more stable motion across 4 degrees of freedom. Each joint 
-distributes motion across two motors/servos via bevel gearing, similar to a 
-differential drivetrain. The arm supports two control modes:
+This project uses differential joints to achieve smooth, stable motion across 4 degrees of freedom. Each joint distributes motion across two motors/servos via bevel gearing, similar to a differential drivetrain. The arm supports two control modes:
 - **Joystick teleop** — direct gamepad control
 - **Gesture control** — real-time hand tracking via webcam (OpenCV + MediaPipe)
 
