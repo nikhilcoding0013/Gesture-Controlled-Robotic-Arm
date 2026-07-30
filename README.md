@@ -4,7 +4,7 @@ A robotic arm built from FTC (FIRST Tech Challenge) hardware, controllable via
 joystick teleop or real-time hand gesture recognition. Built independently to 
 explore differential joint mechanisms, control systems, and human-robot interaction.
 
-https://github.com/user-attachments/assets/d9f5299f-2b0d-4cf7-b2cb-1da6fac5e059
+https://github.com/user-attachments/assets/0a7cc894-7853-4540-9973-29fe1fd12886
 
 ## Overview
 
