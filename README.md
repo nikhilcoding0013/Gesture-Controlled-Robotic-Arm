@@ -26,6 +26,8 @@ This project uses differential joints to achieve smooth, stable motion across 4 
 
 ## Software
 
+`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/RoboticArm`
+
 The control stack is split into two independent input modes that feed the 
 same underlying joint-control logic.
 
