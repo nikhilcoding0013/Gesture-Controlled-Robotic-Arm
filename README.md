@@ -26,13 +26,11 @@ This project uses differential joints to achieve smooth, stable motion across 4 
 
 ## Software
 
-`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/RoboticArm`
-
 The control stack is split into two independent input modes that feed the 
-same underlying joint-control logic.
+same underlying joint-control logic (teleoperation and gesture-control).
 
 **Joint Control**
-- Differential joints require coordinated dual-motor output — a single target angle is resolved into two motor commands (`tilt ± spin`) so each joint's two actuators drive together correctly
+- Differential joints require coordinated dual-motor output; a single target angle is resolved into two motor commands (`tilt ± spin`) so each joint's two actuators drive together correctly
 - Joystick input is mapped continuously to servo/motor position, clamped within physical joint limits, with auto-return to neutral on release
 
 ```
@@ -55,6 +53,39 @@ servo1.setPosition(0.5);
 - Each hand's `(x, y)` joystick value is packed into a 16-byte UDP payload and streamed every frame to the REV Control Hub
 - A background thread on the Java side receives these packets and stores the latest values; the main OpMode loop reads them as `gamepad.left_stick_x/y`, for example
 - Follows same joint-control logic as joystick teleop
+
+## TeamCode
+`TeamCode/src/main/java/org/firstinspires/ftc/teamcode/RoboticArm`
+
+**Java (robot-side, runs on the REV Control Hub):**
+- `ArmManipulationGESTURE.java` — receives gesture input over UDP, drives the arm
+- `ArmManipulationJOYSTICK.java` — analog joystick teleop
+- `ArmManipulationSTEP.java` — D-pad discrete-step teleop (initial validation build)
+
+**Python (laptop-side, gesture control only):**
+- `gestureCtrl.py` — main gesture control script; runs hand tracking and 
+  streams joystick values to the robot over UDP
+- `hand_test.py` — standalone hand-tracking test script (no UDP/robot 
+  connection), useful for verifying MediaPipe detection on its own
+
+## Dependencies
+
+**Robot-side (Java / Android)**
+- FTC SDK 11.0.0
+- Android Studio
+
+**Laptop-side (Python 3.11)**
+```bash
+pip install opencv-python mediapipe numpy
+```
+
+## Run Process
+1. Deploy `ArmManipulationGESTURE.java` to the Control Hub via Android Studio 
+   and run it as the active OpMode
+2. On a laptop connected to the Control Hub's network run:
+```bash
+   python gestureCtrl.py
+```
 
 ## Results
 - Stable multi-joint differential motion under load
