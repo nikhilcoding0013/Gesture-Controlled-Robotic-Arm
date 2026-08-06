@@ -1,7 +1,7 @@
 # Gesture-Controlled Differential 4-DOF Robotic Arm
 
 A robotic arm built from FTC (FIRST Tech Challenge) hardware, controllable via 
-joystick teleop or real-time hand gesture recognition.
+joystick teleop or real-time hand gesture recognition. Enables assistive and accessibility-focused application for users with limited mobility.
 
 https://github.com/user-attachments/assets/0a7cc894-7853-4540-9973-29fe1fd12886
 
